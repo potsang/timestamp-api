@@ -2,6 +2,8 @@ var express = require('express');
 var dateFormat = require('dateformat');
 var app = express();
 
+app.set('port', (process.env.PORT || 8080));
+
 function getInstruction() {
   var howToPage = "<h2>" + "Example usage:" + "</h2>";
   howToPage += "<p>";
@@ -48,6 +50,6 @@ app.get(/^\/[\w]*[\D][\w]*/, function (req, res) {
   res.send(result);
 });
 
-app.listen(8080, function () {
-  console.log('Example app listening on port 8080!')
+app.listen(app.get('port'), function () {
+  console.log('Timestamp Microservice is listening on port ' + app.get('port'));
 });
