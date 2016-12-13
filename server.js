@@ -7,10 +7,10 @@ app.set('port', (process.env.PORT || 8080));
 function getInstruction() {
   var howToPage = "<h2>" + "Example usage:" + "</h2>";
   howToPage += "<p>";
-  howToPage += "https://camper-api-project-potsang.c9users.io/December 15, 2015";
+  howToPage += "https://timestamp-potsang.herokuapp.com/December 15, 2015";
   howToPage += "</p>";
   howToPage += "<p>";
-  howToPage += "https://camper-api-project-potsang.c9users.io/1450137600";
+  howToPage += "https://timestamp-potsang.herokuapp.com/1450137600";
   howToPage += "</p>";
   
   return  howToPage;
