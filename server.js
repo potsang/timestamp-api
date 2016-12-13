@@ -22,7 +22,7 @@ app.get(/^\/\d+$/, function (req, res) {
   var unixTime = req.url.slice(1);
   var date = new Date(unixTime * 1000);
   var result = {
-  "unix": unixTime,
+  "unix": date.getTime() / 1000,
   "natural": dateFormat(date, "mmmm d, yyyy")
   }
   res.send(result);
